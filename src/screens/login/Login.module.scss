@@ -1,0 +1,50 @@
+.background {
+  // flex: 1;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  // background-color: green;
+  // backgroundColor: theme.colors.surface,
+}
+.loginContainer {
+  flex: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 340px;
+  // height: 100%;
+  // background-color: pink;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 110;
+  height: 110;
+  margin-bottom: 8;
+}
+.forgotPassword {
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: 24;
+}
+.row {
+  flex-direction: row;
+  margin-top: 4;
+}
+
+.forgot {
+  font-size: 13;
+  font-family: 'Montserrat-LightItalic';
+  // color: theme.colors.secondary,
+}
+.dontHaveAccount {
+  font-family: 'Montserrat-Medium';
+}
+.link {
+  font-weight: bold;
+
+  // color: theme.colors.primary,
+}

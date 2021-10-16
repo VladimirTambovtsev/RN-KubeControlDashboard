@@ -1,0 +1,32 @@
+.container {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+
+.blue {
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Montserrat-BlackItalic';
+}
+
+.nextBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 40px;
+  margin: 0 auto;
+  background-color: pink;
+  border-radius: 5px;
+}
+
+.addDashboardContainer {
+  width: 85%;
+  margin: 0 auto;
+
+  .addDashboardContainerButtton {
+    width: 100%;
+    font-family: 'Montserrat-Light';
+  }
+}
