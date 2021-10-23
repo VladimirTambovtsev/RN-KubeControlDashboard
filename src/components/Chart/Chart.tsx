@@ -57,6 +57,12 @@ export const Chart: FC<Props> = ({x, y, chartTitle}) => {
       </View>
       <LineChart
         data={{
+          // legend: [
+          //   'kubernetes-api-server',
+          //   'Fake Data 1',
+          //   'Fake Data 2',
+          //   'Fake Data 3',
+          // ],
           labels: x.slice(startY, endY - 3).map((milliseconds, i) => {
             let date = new Date(milliseconds);
             // if (i === 0) {

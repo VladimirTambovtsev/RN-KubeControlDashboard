@@ -159,6 +159,13 @@ export const Home = () => {
             chartTitle={grafanaChartTitle}
           />
         )}
+        {grafanaData && (
+          <Chart
+            x={grafanaData?.map((obj: any) => obj.x)}
+            y={grafanaData?.map((obj: any) => obj.y)}
+            chartTitle={grafanaChartTitle}
+          />
+        )}
       </ScrollView>
     </SafeAreaView>
   );
