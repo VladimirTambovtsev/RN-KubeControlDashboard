@@ -16,6 +16,11 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
+### ios sync_development_certs
+```
+fastlane ios sync_development_certs
+```
+Sync Apple development certs with match
 ### ios tests
 ```
 fastlane ios tests
@@ -24,6 +29,11 @@ Run iOS Tests
 ### ios beta
 ```
 fastlane ios beta
+```
+Push a new beta build to TestFlight
+### ios beta2
+```
+fastlane ios beta2
 ```
 Push a new beta build to TestFlight
 
