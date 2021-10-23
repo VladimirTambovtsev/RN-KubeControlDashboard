@@ -46,6 +46,11 @@ Push a new beta build to TestFlight
 fastlane ios beta2
 ```
 Push a new beta build to TestFlight
+### ios beta4
+```
+fastlane ios beta4
+```
+Push a new release build to TestFlight
 
 ----
 

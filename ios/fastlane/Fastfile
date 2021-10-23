@@ -93,4 +93,17 @@ platform :ios do
     build_app(workspace: "KubeControlDashboard.xcworkspace", scheme: "KubeControlDashboard")
     upload_to_testflight
   end
+
+
+
+  desc "Push a new release build to TestFlight"
+  lane :beta4 do
+    increment_build_number(xcodeproj: "KubeControlDashboard.xcodeproj")
+    match(type: "appstore")
+    build_app(scheme: "KubeControlDashboard")
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true
+    )
+    clean_build_artifacts
+  end
 end
