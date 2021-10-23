@@ -39,6 +39,11 @@ platform :ios do
     gym(scheme: "KubeControlDashboard-staging", workspace: "KubeControlDashboard.xcworkspace")
   end
 
+  desc "Sync Apple development certs with match"
+  lane :sync_development_certs do
+    match(type: 'development')
+  end
+
   desc "Run iOS Tests"
   lane :tests do
     run_tests(scheme: "MyAppTests")
@@ -52,10 +57,11 @@ platform :ios do
     commit_version_bump(message: "bump build")
     push_to_git_remote
   end
-  # desc "Push a new beta build to TestFlight"
-  # lane :beta do
-  #   increment_build_number(xcodeproj: "KubeControlDashboard.xcodeproj")
-  #   build_app(workspace: "KubeControlDashboard.xcworkspace", scheme: "KubeControlDashboard")
-  #   upload_to_testflight
-  # end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta2 do
+    increment_build_number(xcodeproj: "KubeControlDashboard.xcodeproj")
+    build_app(workspace: "KubeControlDashboard.xcworkspace", scheme: "KubeControlDashboard")
+    upload_to_testflight
+  end
 end
