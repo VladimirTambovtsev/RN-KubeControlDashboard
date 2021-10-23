@@ -41,8 +41,8 @@ platform :ios do
 
   desc 'Fetch certificates and provisioning profiles'
   lane :certificates do
-    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'development', readonly: true)
-    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'appstore', readonly: true)
+    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'development')
+    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'appstore')
   end
 
   desc "Run iOS Tests"
