@@ -21,6 +21,11 @@ or alternatively using `brew install fastlane`
 fastlane ios certificates
 ```
 Fetch certificates and provisioning profiles
+### ios beta3
+```
+fastlane ios beta3
+```
+Ship to Testflight.
 ### ios tests
 ```
 fastlane ios tests

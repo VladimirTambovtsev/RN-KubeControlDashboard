@@ -39,11 +39,30 @@ platform :ios do
     gym(scheme: "KubeControlDashboard-staging", workspace: "KubeControlDashboard.xcworkspace")
   end
 
+  # TEST MATCH PIPELINE
   desc 'Fetch certificates and provisioning profiles'
   lane :certificates do
     match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'development')
     match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'appstore')
   end
+
+  desc 'Build the iOS application.'
+  private_lane :build do
+    certificates
+    increment_build_number(xcodeproj: 'KubeControlDashboard.xcodeproj')
+    gym(scheme: 'KubeControlDashboard', project: 'KubeControlDashboard.xcodeproj')
+  end
+
+  desc 'Ship to Testflight.'
+  lane :beta3 do
+    build
+    pilot
+    commit_version_bump(message: 'Bump build', xcodeproj: 'KubeControlDashboard.xcodeproj')
+    push_to_git_remote
+  end
+
+  # END TEST
+
 
   desc "Run iOS Tests"
   lane :tests do
