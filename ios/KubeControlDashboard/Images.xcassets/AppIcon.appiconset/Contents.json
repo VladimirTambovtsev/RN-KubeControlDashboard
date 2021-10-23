@@ -1,97 +1,62 @@
 {
   "images" : [
     {
-      "filename" : "Kubernetes-Logo.wine-20@2x.png",
+      "filename" : "kubernetes-labs-post-1-20@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-20@3x.png",
+      "filename" : "kubernetes-labs-post-1-20@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-29.png",
+      "filename" : "kubernetes-labs-post-1-29.png",
       "idiom" : "iphone",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-29@2x.png",
+      "filename" : "kubernetes-labs-post-1-29@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-29@3x.png",
+      "filename" : "kubernetes-labs-post-1-29@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-40@2x.png",
+      "filename" : "kubernetes-labs-post-1-40@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-40@3x.png",
+      "filename" : "kubernetes-labs-post-1-40@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-60@2x.png",
+      "filename" : "kubernetes-labs-post-1-60@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-60@3x.png",
+      "filename" : "kubernetes-labs-post-1-60@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
-      "filename" : "Kubernetes-Logo.wine-1025.png",
+      "filename" : "kubernetes-labs-post-1-1025.png",
       "idiom" : "ios-marketing",
-      "scale" : "1x",
-      "size" : "1024x1024"
-    },
-    {
-      "filename" : "Kubernetes-Logo.wine-83.5@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "Kubernetes-Logo.wine-20.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "20x20"
-    },
-    {
-      "filename" : "Kubernetes-Logo.wine-40.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "40x40"
-    },
-    {
-      "filename" : "Kubernetes-Logo.wine-76.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "size" : "76x76"
-    },
-    {
-      "filename" : "Kubernetes-Logo.wine-76@2x.png",
-      "idiom" : "universal",
-      "scale" : "2x",
-      "size" : "76x76"
-    },
-    {
-      "filename" : "Kubernetes-Logo.wine-1024.png",
-      "idiom" : "universal",
       "scale" : "1x",
       "size" : "1024x1024"
     }
