@@ -39,6 +39,11 @@ platform :ios do
     gym(scheme: "KubeControlDashboard-staging", workspace: "KubeControlDashboard.xcworkspace")
   end
 
+  desc "Run iOS Tests"
+  lane :tests do
+    run_tests(scheme: "MyAppTests")
+  end
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
     staging_build
