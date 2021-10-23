@@ -39,9 +39,10 @@ platform :ios do
     gym(scheme: "KubeControlDashboard-staging", workspace: "KubeControlDashboard.xcworkspace")
   end
 
-  desc "Sync Apple development certs with match"
-  lane :sync_development_certs do
-    match(type: 'development')
+  desc 'Fetch certificates and provisioning profiles'
+  lane :certificates do
+    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'development', readonly: true)
+    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'appstore', readonly: true)
   end
 
   desc "Run iOS Tests"
