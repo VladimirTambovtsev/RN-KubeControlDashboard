@@ -34,67 +34,10 @@ platform :ios do
     end
   end
 
-  private_lane :staging_build do
-    increment_build_number_in_plist(xcodeproj: 'KubeControlDashboard.xcodeproj', target: 'KubeControlDashboard')
-    gym(scheme: "KubeControlDashboard-staging", workspace: "KubeControlDashboard.xcworkspace")
-  end
-
-  # TEST MATCH PIPELINE
-  desc 'Fetch certificates and provisioning profiles'
-  lane :certificates do
-    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'development')
-    match(app_identifier: 'pro.tambovtsev.KubeControlDashboard', type: 'appstore')
-  end
-
-  desc 'Fetch certificates. Build the iOS application.'
-  lane :build do
-    certificates
-    gym(
-      scheme: "KubeControlDashboard",
-      workspace: 'KubeControlDashboard.xcworkspace',
-      export_method: 'development'
-    )
-  end
-  # desc 'Build the iOS application.'
-  # private_lane :build do
-  #   certificates
-  #   increment_build_number(xcodeproj: 'KubeControlDashboard.xcodeproj')
-  #   gym(scheme: 'KubeControlDashboard', project: 'KubeControlDashboard.xcodeproj')
-  # end
-
-  desc 'Ship to Testflight.'
-  lane :beta3 do
-    build
-    pilot
-    commit_version_bump(message: 'Bump build', xcodeproj: 'KubeControlDashboard.xcodeproj')
-    push_to_git_remote
-  end
-
-  # END TEST
-
-
   desc "Run iOS Tests"
   lane :tests do
     run_tests(scheme: "MyAppTests")
   end
-
-  desc "Push a new beta build to TestFlight"
-  lane :beta do
-    staging_build
-    # build_app(workspace: "KubeControlDashboard.xcworkspace", scheme: "KubeControlDashboard")
-    upload_to_testflight(username: "tambovcev99@mail.ru", app_identifier: "KubeControlDashboard")
-    commit_version_bump(message: "bump build")
-    push_to_git_remote
-  end
-
-  desc "Push a new beta build to TestFlight"
-  lane :beta2 do
-    increment_build_number(xcodeproj: "KubeControlDashboard.xcodeproj")
-    build_app(workspace: "KubeControlDashboard.xcworkspace", scheme: "KubeControlDashboard")
-    upload_to_testflight
-  end
-
-
 
   desc "Push a new release build to TestFlight"
   lane :beta4 do
@@ -103,6 +46,19 @@ platform :ios do
     build_app(scheme: "KubeControlDashboard")
     upload_to_testflight(
       skip_waiting_for_build_processing: true
+    )
+    clean_build_artifacts
+  end
+
+  desc "Push a new release build to the App Store"
+  lane :release do
+    increment_build_number(xcodeproj: "KubeControlDashboard.xcodeproj")
+    match(type: "appstore")
+    build_app(scheme: "KubeControlDashboard")
+    upload_to_app_store(
+      skip_waiting_for_build_processing: true,
+      submit_for_review: true,
+      force: true
     )
     clean_build_artifacts
   end
