@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KubeControlDashboard</string>
+    <string name="CodePushDeploymentKey" moduleConfig="true" translatable="false">Ns99x4IoCUr89_7M6q8637hkKwhyE3gKJzNyu</string>
 </resources>

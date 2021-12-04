@@ -122,7 +122,7 @@ export const Home = () => {
           onPress={() => navigation.navigate({name: 'Login', key: 'Login'})}
         />
         <View className={s.addDashboardContainer}>
-          <Header text="Add Dashboard" />
+          <Header text="Add Dashboard 2" />
           <Card>
             <Input
               // label="Email"
@@ -166,6 +166,13 @@ export const Home = () => {
             chartTitle={grafanaChartTitle}
           />
         )}
+        {/* {grafanaData && (
+          <Chart
+            x={grafanaData?.map((obj: any) => obj.x)}
+            y={grafanaData?.map((obj: any) => obj.y)}
+            chartTitle={grafanaChartTitle}
+          />
+        )}  */}
       </ScrollView>
     </SafeAreaView>
   );
